@@ -1,5 +1,4 @@
 youtube-transcript-api
 pytube
 moviepy
-googletrans
-translate
+pysrt
