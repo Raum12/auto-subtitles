@@ -11,20 +11,27 @@ def Download(link):
         youtubeObject.download(filename="no_subtitles.mp4")
     except:
         print("An error has occurred")
-    print("Download is completed successfully")
+    print("Successfully downloaded video")
 
 
 def main():
-    video_id = "rc0mws9NT-0"
+    video_id = input("Enter the video ID: ")
+    language = input("Enter language to translate to (e.g. 'ar', 'de'): ")
     formatter = SRTFormatter()
 
     Download(f"https://www.youtube.com/watch?v={video_id}")
 
-    transcript = YouTubeTranscriptApi.get_transcript(video_id)
-    srt_formatted = formatter.format_transcript(transcript)
+    # transcript = YouTubeTranscriptApi.get_transcript(video_id)
+    transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+    transcript = transcript_list.find_transcript(['en'])
 
-    with open("subtitles.srt", "w") as file:
+    translated_transcript = transcript.translate(language)
+    srt_formatted = formatter.format_transcript(translated_transcript.fetch())
+
+    print("Writing SRT file...")
+    with open("subtitles.srt", "w", encoding="utf-8") as file:
         file.write(srt_formatted)
+    print("Successfully wrote SRT file")
 
     mp4_filename = "no_subtitles.mp4"
     srt_filename = "subtitles.srt"
@@ -32,15 +39,18 @@ def main():
     video = VideoFileClip(mp4_filename)
     subtitles = pysrt.open(srt_filename)
 
-    begin, end = mp4_filename.split("mp4")
-    output_video_file = f"{begin}_subtitled.mp4"
+    begin, end = mp4_filename.split(".mp4")
+    output_video_file = "subtitled.mp4"
 
-    print(f"Output file name: {output_video_file}")
-
+    print("Burning subtitles into video...")
     subtitle_clips = burn_subtitles.create_subtitle_clips(subtitles, video.size)
+    print("Successfully burned subtitles into video")
+
     final_video = CompositeVideoClip([video] + subtitle_clips)
 
+    print("Writing output file...")
     final_video.write_videofile(output_video_file)
+    print("Successfully wrote output file")
 
 
 if __name__ == "__main__":
