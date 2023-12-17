@@ -31,4 +31,4 @@ Enter the `app` directory for the output file to be correctly generated and run 
 Translating to Arabic or other non-Latin character languages might have issues due to font conflicts on macOS and Linux. In addition, Arabic subtitle fetching might not work on macOS and Linux, but translation to Arabic works on Windows - I believe this is a font related issue.
 
 ## Contributions and Bug Reports
-Contributions to address platform-specific issues are welcome. For bug reports or assistance, feel free to open an issue in the repository or email me [here](mailto:shibani.raum@gmail.com?subject=[GitHub]%20Source%20Han%20Sans)
+Contributions to address platform-specific issues are welcome. For bug reports or assistance, feel free to open an issue in the repository or email me [here](mailto:shibani.raum@gmail.com?subject=[GitHub])
