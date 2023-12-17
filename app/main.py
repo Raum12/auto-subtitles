@@ -42,7 +42,7 @@ def main():
     output_video_file = "output/subtitled.mp4"
 
     print("Burning subtitles into video...")
-    subtitle_clips = burn_subtitles.create_subtitle_clips(subtitles, video.size)
+    subtitle_clips = burn_subtitles.create_subtitle_clips(subtitles, video.size )
     print("Successfully burned subtitles into video")
 
     final_video = CompositeVideoClip([video] + subtitle_clips)
