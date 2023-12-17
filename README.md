@@ -1,5 +1,3 @@
-# Auto Subtitle Translator
-
 # Auto Subtitle Translater
 
 ## Overview
