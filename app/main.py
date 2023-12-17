@@ -15,6 +15,11 @@ def Download(link):
 
 
 def main():
+    output_dir = "output"
+    path = os.path.join(os.getcwd(), output_dir)
+    if not os.path.exists(path):
+        os.mkdir(path)
+
     video_id = input("Enter the video ID: ")
     language = input("Enter language to translate to (e.g. 'ar', 'de'): ")
     formatter = SRTFormatter()
