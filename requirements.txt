@@ -2,5 +2,3 @@ youtube-transcript-api
 pytube
 moviepy
 pysrt
-python-bidi 
-arabic_reshaper

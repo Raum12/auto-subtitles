@@ -1,7 +1,6 @@
 # source: https://github.com/ramsrigouthamg/Supertranslate.ai/tree/main/Burn_Subtitles_Into_Video
 
-import sys, arabic_reshaper
-from bidi.algorithm import get_display
+import sys
 from moviepy.editor import *
 
 def time_to_seconds(time_obj):
@@ -12,9 +11,6 @@ def create_subtitle_clips(subtitles, videosize, language, fontsize=13, color="wh
     font = "Arial"
 
     for subtitle in subtitles:
-        if language == 'ar':
-            subtitle.text = get_display(arabic_reshaper.reshape(subtitle.text))
-
 
         start_time = time_to_seconds(subtitle.start)
         end_time = time_to_seconds(subtitle.end)
