@@ -30,10 +30,8 @@ def main():
     Download(f"https://www.youtube.com/watch?v={video_id}")
 
     transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
-    print(transcript_list)
     transcript = transcript_list.find_transcript([input_language])
 
-    return 0 
     translated_transcript = transcript.translate(output_language)
     srt_formatted = formatter.format_transcript(translated_transcript.fetch())
 

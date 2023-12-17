@@ -6,7 +6,7 @@ from moviepy.editor import *
 def time_to_seconds(time_obj):
     return time_obj.hours * 3600 + time_obj.minutes * 60 + time_obj.seconds + time_obj.milliseconds / 1000
 
-def create_subtitle_clips(subtitles, videosize, language, fontsize=13, color="white", debug=False):
+def create_subtitle_clips(subtitles, videosize, language, fontsize=20, color="white", debug=False):
     subtitle_clips = []
     font = "Arial"
 
