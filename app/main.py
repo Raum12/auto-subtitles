@@ -2,13 +2,13 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import SRTFormatter
 from moviepy.editor import VideoFileClip, CompositeVideoClip
 from pytube import YouTube
-import pysrt, burn_subtitles
+import pysrt, burn_subtitles, os
 
 def Download(link):
     youtubeObject = YouTube(link)
     youtubeObject = youtubeObject.streams.get_highest_resolution()
     try:
-        youtubeObject.download(filename="no_subtitles.mp4")
+        youtubeObject.download(filename="output/no_subtitles.mp4")
     except:
         print("An error has occurred")
     print("Successfully downloaded video")
