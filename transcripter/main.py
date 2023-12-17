@@ -33,14 +33,13 @@ def main():
         file.write(srt_formatted)
     print("Successfully wrote SRT file")
 
-    mp4_filename = "no_subtitles.mp4"
-    srt_filename = "subtitles.srt"
+    mp4_filename = "output/no_subtitles.mp4"
+    srt_filename = "output/subtitles.srt"
 
     video = VideoFileClip(mp4_filename)
     subtitles = pysrt.open(srt_filename)
 
-    begin, end = mp4_filename.split(".mp4")
-    output_video_file = "subtitled.mp4"
+    output_video_file = "output/subtitled.mp4"
 
     print("Burning subtitles into video...")
     subtitle_clips = burn_subtitles.create_subtitle_clips(subtitles, video.size)
