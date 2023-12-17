@@ -1,6 +1,5 @@
 # Auto Subtitle Translater
 
-## Overview
 This tool fetches YouTube video captions, translates them into a specified language, and generates a video with the translated subtitles. It's built to work across Windows, macOS, and Linux, but there are some platform-specific issues that you should be aware of.
 
 ## Dependencies
