@@ -6,8 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
-# video files 
+# video and subtitle files 
 *.mp4
+*.srt
 
 # Distribution / packaging
 .Python
