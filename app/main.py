@@ -29,7 +29,7 @@ def main():
     srt_formatted = formatter.format_transcript(translated_transcript.fetch())
 
     print("Writing SRT file...")
-    with open("subtitles.srt", "w", encoding="utf-8") as file:
+    with open("output/subtitles.srt", "w", encoding="utf-8") as file:
         file.write(srt_formatted)
     print("Successfully wrote SRT file")
 
