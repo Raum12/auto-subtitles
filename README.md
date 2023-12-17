@@ -1,8 +1,17 @@
 # Auto Subtitle Translater
+Allows subtitle addition or translation of captions to or on a youtube video or any video file. To input video files scroll to the `Video Files` section; otherwise, go down to the `Youtube Videos` section.
 
-This tool fetches YouTube video captions, translates them into a specified language, and generates a video with the translated subtitles. It is built to work across Windows, macOS, and Linux, but there are some platform-specific issues that you should be aware of.
+## Video Files
+Takes any video file as input and generates subtitles of any language ontop of this video. 
 
-## Dependencies
+Navigate to the `subtitle_generator` directory.
+
+## Youtube Videos
+This will fetch a YouTube video's captions, translate them into a specified language, and generate a video with the translated subtitles. It is built to work across Windows, macOS, and Linux, but there are some platform-specific issues that you should be aware of.
+
+Navigate to the `youtube` directory.
+
+### Dependencies
 
 [ImageMagick](https://imagemagick.org/) is required. On Windows, it should be added to the system PATH. This is not necessary on macOS or Linux. Instructions for platform specific setup may be found [here](https://moviepy-tburrows13.readthedocs.io/en/improve-docs/install.html); please follow these to ensure that ImageMagick is correctly detected. 
 
