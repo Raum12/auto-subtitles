@@ -4,7 +4,7 @@ This tool fetches YouTube video captions, translates them into a specified langu
 
 ## Dependencies
 
-[ImageMagick](https://imagemagick.org/) is required. On Windows, it should be added to the system PATH. On macOS and Linux, there might be some issues with font conflicts. Instructions for platform specific setup may be found [here](https://moviepy-tburrows13.readthedocs.io/en/improve-docs/install.html); please follow these to ensure that ImageMagick is correctly detected; the most important step that must be taken for Linux users is the following:
+[ImageMagick](https://imagemagick.org/) is required. On Windows, it should be added to the system PATH. This is not necessary on MacOS or Linux. Instructions for platform specific setup may be found [here](https://moviepy-tburrows13.readthedocs.io/en/improve-docs/install.html); please follow these to ensure that ImageMagick is correctly detected; the most important step that must be taken for Linux users is the following:
 
 After installing MoviePy on the terminal with `sudo apt install imagemagick`, IMAGEMAGICK will not be detected by moviepy. This bug can be fixed. 
 Modify the file in this directory:`/etc/ImageMagick-6/policy.xml`
