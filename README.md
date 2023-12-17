@@ -1,11 +1,13 @@
 # Auto Subtitle Translater
 Allows subtitle addition or translation of captions to or on a youtube video or any video file. To input video files scroll to the `Video Files` section; otherwise, go down to the `Youtube Videos` section.
 
+-----
 ## Video Files
 Takes any video file as input and generates subtitles of any language ontop of this video. 
 
 Navigate to the `subtitle_generator` directory.
 
+-----
 ## Youtube Videos
 This will fetch a YouTube video's captions, translate them into a specified language, and generate a video with the translated subtitles. It is built to work across Windows, macOS, and Linux, but there are some platform-specific issues that you should be aware of.
 
