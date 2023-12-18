@@ -2,3 +2,5 @@ youtube-transcript-api
 pytube
 moviepy
 pysrt
+pvleopard
+git+https://github.com/m1guelpf/auto-subtitle.git
