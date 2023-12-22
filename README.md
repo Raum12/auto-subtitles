@@ -1,3 +1,3 @@
 hosted on pythonanywhere
-username: english-subtitler
+username: EnglishSubtitler
 password: Raum2007
