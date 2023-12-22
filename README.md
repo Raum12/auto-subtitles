@@ -9,7 +9,7 @@ Navigate to the `subtitle_generator` directory.
 
 -----
 ## Youtube Videos
-This will fetch a YouTube video's captions, translate them into a specified language, and generate a video with the translated subtitles. It is built to work across Windows, macOS, and Linux, but there are some platform-specific issues that you should be aware of.
+This will fetch a YouTube video's captions, translate them into a specified language, and generate a video with the translated subtitles.
 
 Navigate to the `youtube` directory.
 
@@ -33,9 +33,6 @@ Enter the `app` directory for the output file to be correctly generated and run 
 2. Select the desired source language of the video's captions.
 3. Enter the target language for translation.
 4. The tool will attempt to fetch and translate the subtitles.
-
-### Known Issues on macOS and Linux
-Translating to Arabic or other non-Latin character languages may have issues due to font conflicts on macOS and Linux. In addition, Arabic subtitle fetching might not work on macOS and Linux, but translation to Arabic works on Windows - I believe this is a font related issue. I have also faced issues fetching arabic subtitles from videos on youtube.
 
 ## Contributions and Bug Reports
 Contributions to address platform-specific issues are welcome. For bug reports or assistance, feel free to open an issue in the repository or email me [here](mailto:shibani.raum@gmail.com?subject=[GitHub])
