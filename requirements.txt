@@ -1,7 +1,4 @@
-youtube-transcript-api
 pytube
-moviepy
-pysrt
-pvleopard
-arabic-reshaper
-python-bidi
+git+https://github.com/m1guelpf/auto-subtitle.git
+ffmpeg-python
+flask

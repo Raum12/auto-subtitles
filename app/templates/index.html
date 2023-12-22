@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Translate Subtitles to English</title>
+    
+</head>
+
+<body>
+    <form action="{{ url_for('read_form') }}" method="POST">
+        <label for="video_url">Enter youtube video url:</label>
+        <input name="video_url" type="text">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
