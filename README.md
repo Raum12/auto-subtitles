@@ -1,5 +1,5 @@
 hosted on pythonanywhere
 
-- username: EnglishSubtitler
+- username: englishsubtitler
 - password: Raum2007
 - email: nrichlibya@gmail.com
