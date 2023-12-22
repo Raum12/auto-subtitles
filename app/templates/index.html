@@ -12,9 +12,12 @@
 
 <body>
     <form action="{{ url_for('read_form') }}" method="POST">
-        <label for="video_url">Enter youtube video url:</label>
-        <input name="video_url" type="text">
-        <button type="submit">Submit</button>
+        <label for="video_url">Enter youtube video url</label>
+
+        <div>
+            <input name="video_url" type="text">
+            <button type="submit">Submit</button>
+        </div>
     </form>
 </body>
 
