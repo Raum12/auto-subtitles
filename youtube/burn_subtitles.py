@@ -2,9 +2,19 @@
 
 import sys
 from moviepy.editor import *
+import arabic_reshaper
+from bidi.algorithm import get_display
 
 def time_to_seconds(time_obj):
     return time_obj.hours * 3600 + time_obj.minutes * 60 + time_obj.seconds + time_obj.milliseconds / 1000
+
+import sys
+from moviepy.editor import *
+import arabic_reshaper
+
+def time_to_seconds(time_obj):
+    return time_obj.hours * 3600 + time_obj.minutes * 60 + time_obj.seconds + time_obj.milliseconds / 1000
+
 
 def create_subtitle_clips(subtitles, videosize, language, fontsize=20, color="white", debug=False):
     subtitle_clips = []
@@ -18,7 +28,13 @@ def create_subtitle_clips(subtitles, videosize, language, fontsize=20, color="wh
 
         video_width, video_height = videosize
 
-        text_clip = TextClip(subtitle.text, fontsize=fontsize, font=font, color=color, bg_color="black", size=(video_width*3/4, None), method="caption").set_start(start_time).set_duration(duration)
+        if language == "ar":
+            text = arabic_reshaper.reshape(subtitle.text)
+            text = get_display(text)
+        else:
+            text = subtitle.text    
+        
+        text_clip = TextClip(text, fontsize=fontsize, font=font, color=color, bg_color="black", size=(video_width*3/4, None), method="caption").set_start(start_time).set_duration(duration)
 
         subtitle_x_position = "center"
         subtitle_y_position = video_height* 4 / 5
