@@ -9,7 +9,7 @@ This Flask app takes a YouTube video URL as input and generates English subtitle
 python -m venv .venv
 ```
 
-2. Activate the environment 
+2. Activate the virtual env
 
 ```
 source .venv/bin/activate
