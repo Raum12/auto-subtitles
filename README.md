@@ -1,7 +1,6 @@
 ## Youtube subtitler
 
-This flask app will take a youtube video's url as input and generate english subtitles for the video whether it be in english or any other language. Then it burns the subtitles to an mp4 video file and outputs the original video with the new subtitles.
-
+This Flask app takes a YouTube video URL as input and generates English subtitles for the video, regardless of its language.
 ## Usage
 
 1. Create a virtual env
