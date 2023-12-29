@@ -2,7 +2,7 @@ from pytube import YouTube
 import os, urllib.parse, requests
 from flask import send_file
 
-video_path = "upload_folder/video.mp4"
+video_path = "upload_folder/output.mp4"
 
 def Download(link):
     youtubeObject = YouTube(link)
@@ -25,5 +25,6 @@ def generate_translated_subs(video_url):
 
     Download(f"https://www.youtube.com/watch?v={video_id}")
     
-    os.system(f"auto_subtitle {video_path} --task translate")
-    os.rename("video.mp4", "upload_folder/video.mp4")
+    os.rename(video_path, "upload_folder/output.mp4")
+    os.system(f"auto_subtitle upload_folder/output.mp4 --task translate")
+    # os.rename("video.mp4", "upload_folder/video.mp4")
