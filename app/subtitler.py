@@ -28,3 +28,6 @@ def generate_translated_subs(video_url):
     os.rename(video_path, "upload_folder/output.mp4")
     os.system(f"auto_subtitle upload_folder/output.mp4 --task translate")
     # os.rename("video.mp4", "upload_folder/video.mp4")
+
+if __name__ == "__main__":
+    generate_translated_subs(input("Video url: "))
