@@ -2,7 +2,7 @@ pytube
 ffmpeg-python
 flask
 arabic_reshaper
-bidi
+python-bidi
 moviepy
 pysrt
 youtube_transcript_api
