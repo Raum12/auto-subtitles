@@ -18,7 +18,7 @@ def read_form():
     
     file_path = "upload_folder/video.mp4"
    
-    generate_translated_subs(video_url)
+    generate_translated_subs("T", video_url)
     file_handle = open(file_path, 'r')
     
     @after_this_request
